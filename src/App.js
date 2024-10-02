@@ -4,12 +4,12 @@ import Navbar from './componants/Navbar';
 import About from './componants/About';
 import { useState } from 'react';
 import Alert from './componants/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import Login from './componants/Login';
 
 
@@ -62,34 +62,29 @@ const toggleTheme=(newTheme)=> {
 
 
 
-{/* <Router> */}
+<Router basename="/TextUtils-React">
 <Navbar title="TextUtils" home="Home" aboutText="about" mode={mode} theme={theme} toggleTheme={toggleTheme} toggleMode={toggleModeFunc} ></Navbar>
 <Alert alert={alert}/>
-{/* <Routes> */}
-{/* <Route exact path="/about"
+<Routes>
+<Route exact path="/about"
 element={
 <div className="container">
 <About toggleMode={toggleModeFunc} mode={mode}  toggleTheme={toggleTheme} theme={theme}/>
 </div>
-} */}
-{/* /> */}
-<div className="container">
+}
+/> 
+
+<Route exact path="/"
+element={  <div className="container">
 <TextForm heading="Enter the text to Analyze" title="" showAlert={showAlert} theme={theme} value="Enter your texthere" mode={mode}> </TextForm>
 </div>
-{/* <Route exact path="/"
-element={  
 }
-/> */}
-{/* <Route exact path="/login" element={<Login mode={mode} theme={theme} ></Login>} /> */}
+/>
+<Route exact path="/login" element={<Login mode={mode} theme={theme} ></Login>} />
 
 
-{/* // </Routes> */}
- {/* </Router> */}
-
-
-
-
-
+ </Routes>
+ </Router>
 
   </>
 

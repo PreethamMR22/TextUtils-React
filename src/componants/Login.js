@@ -18,7 +18,7 @@ export default function Login(props) {
         background:props.theme,
         color:'black',
       }
-      if(props.mode=='dark' && props.theme=='white') {
+      if(props.mode==='dark' && props.theme==='white') {
         MyStyle.background='black';
         MyStyle.color='white';
       }
@@ -28,7 +28,7 @@ export default function Login(props) {
   }
   else 
   document.body.style.background=props.theme;
-  if(props.mode=='light' && props.theme=='white') {
+  if(props.mode==='light' && props.theme==='white') {
     MyStyle.color='black';
   }
   else MyStyle.color='white';
